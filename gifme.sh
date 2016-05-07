@@ -12,7 +12,7 @@ verbosity="-loglevel panic"
 dither=
 
 usage(){
-  echo "usage: ./script.sh [-s start time ] [-d duration ] [ -w width ]
+  echo "usage: gifme [-s start time ] [-d duration ] [ -w width ]
   [ -f frames per second ] [ -b bayer scale filter] [INPUT FILE] [OUTPUT FILE]
 
   Cut a video file and output a gif. The only required argument is the input
@@ -101,14 +101,15 @@ index=$(($OPTIND))
 # get argument value
 arg="${!index}"
 
+echo "arg = "$arg
 # exit if there's no arg
-if [ -z $arg ];then
+if [ -z "$arg" ];then
 echo "Please supply an input file and an optional output file"
 exit 1
 fi
 
 # otherwise set the vars
-input_file=$arg
+input_file="$arg"
 
 # get second index
 index2="$(($OPTIND + 1))"
@@ -121,8 +122,8 @@ output_file=$arg2
 fi
 
 remove_palette(){
-if [ -f temp_pallette.png ];then
-  rm temp_pallette.png
+if [ -f temp_palette.png ];then
+  rm temp_palette.png
 fi
 }
 
