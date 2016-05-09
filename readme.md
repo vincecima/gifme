@@ -6,7 +6,13 @@ Requires [ffmpeg]() as a dependency.
 
 The defaults will produce high quality gifs at a very small file size when making gifs from screencaptured video.
 
-![]()
+Example:
+
+This command makes a gif from a quicktime screencapture called `screencapture.mov` beginning at the 10 second mark and lasting 6 seconds. The gif will be 600px wide and aspect ratio will be preserved. We'll call the output gif `chart.gif`.
+
+`./gifme.sh -s 00:00:10 -d 6 -w 600 screencapture.mov chart.gif`
+
+![example](chart.gif)
 
 If you need to reduce the file size further, try reducing the size, then the framerate, and then mess with the dithering options to get the size you need.
 
