@@ -4,9 +4,11 @@ A little command line utility to wrap around some clever ffmpeg commands I lifte
 
 Requires [ffmpeg]() as a dependency.
 
-Under the hood, are two simple ffmpeg commands: one trims and reads a video file, generating a single global color palette. Then a second outputs a gif using that color palette and some optional filter parameters.
+The defaults will produce high quality gifs at a very small file size when making gifs from screencaptured video.
 
-The defaults will produce high quality gifs at a very small filesize when giffifying screencaptured video. When making gifs from high quality video, you will want to first try reducing the size, then the framerate, and then mess with the dithering options to get the size you need.
+![]()
+
+If you need to reduce the file size further, try reducing the size, then the framerate, and then mess with the dithering options to get the size you need.
 
 usage: gifme [-s start time ] [-d duration ] [ -w width ]
 [ -f frames per second ] [ -b bayer scale filter] [INPUT FILE] [OUTPUT FILE]

@@ -93,7 +93,11 @@ echo "start time = "$start_time
 echo "duration = "$duration
 echo "width = "$width
 echo "frames per second = "$fps
+# only echo the dither option if the user chose it
+if [ $arg ]; then
 echo "dither"$dither
+fi
+echo ""
 
 # set index for positionals
 # positions come after OPTIND
@@ -101,7 +105,6 @@ index=$(($OPTIND))
 # get argument value
 arg="${!index}"
 
-echo "arg = "$arg
 # exit if there's no arg
 if [ -z "$arg" ];then
 echo "Please supply an input file and an optional output file"
