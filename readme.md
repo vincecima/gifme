@@ -54,3 +54,10 @@ A number 1-3 representing desired Bayer Scale dithering filter. The Bayer Scale 
 
 - -o DITHERING OFF  
 Turns off dithering. Do not use this option with -b or the results may be unexpected.
+
+## Installation
+
+MacOS with Homebrew:
+
+    brew tap scottpham/gifme git@github.com:scottpham/gifme.git
+    brew instll gifme
