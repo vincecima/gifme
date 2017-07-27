@@ -13,8 +13,4 @@ class Gifme < Formula
   def install
     bin.install "gifme.sh" => "gifme"
   end
-
-  test do
-    system "#{bin}/gifme mp4.mp4 out.gif"
-  end
 end
