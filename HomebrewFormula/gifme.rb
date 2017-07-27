@@ -15,6 +15,6 @@ class Gifme < Formula
   end
 
   test do
-    system "#{bin}/gifme"
+    system "#{bin}/gifme mp4.mp4 out.gif"
   end
 end
